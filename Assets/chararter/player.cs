@@ -26,6 +26,7 @@ public class player : MonoBehaviour
         mycollider2d = GetComponent<Collider2D>();
         gravityscale = myrb.gravityScale;
         isALive = true;
+        
     }
 
     // Update is called once per frame
@@ -88,7 +89,7 @@ public class player : MonoBehaviour
             myamin.SetTrigger("death");
             GetComponent<Rigidbody2D>().velocity = deathspeed;
             FindObjectOfType<gamesession>().Processpalyerdeath();
-
+            Debug.Log("player death ");
 
 
         }
