@@ -103,7 +103,8 @@ public class player : MonoBehaviour
 
              if (playerlive < 0)
             {
-             isALive = false;
+                Debug.Log("player death "); 
+                isALive = false;
              myamin.SetTrigger("death");
              GetComponent<Rigidbody2D>().velocity = deathspeed;
               FindObjectOfType<gamesession>().Processpalyerdeath();
