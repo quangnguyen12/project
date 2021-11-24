@@ -67,6 +67,7 @@ public class player : MonoBehaviour
     {
          if (!mycollider2d.IsTouchingLayers(LayerMask.GetMask("ladder")))
         {
+            Debug.Log("đã leo trèo");
             myamin.SetBool("climb", false);
             myrb.gravityScale = gravityscale;
             return;
